@@ -7,7 +7,7 @@ data = pd.read_csv('E:\\UAH_Classes\\Research\\Kansas\\PWS\\master_Kansas_pws_20
 
 # Convert temperature and dew point columns to numeric, assuming 'dewPoint' is the column name for dew point
 data['temperature'] = pd.to_numeric(data['temperature'], errors='coerce')
-data['dewPoint'] = pd.to_numeric(data['dewPoint'], errors='coerce')
+data['dewPoint'] = pd.to_numeric(data['dewpt'], errors='coerce')
 
 # Drop any rows where temperature or dew point data may be missing after conversion
 data.dropna(subset=['temperature', 'dewPoint'], inplace=True)

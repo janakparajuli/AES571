@@ -22,6 +22,7 @@ ax.set_ylabel('Beamwidth (degrees)', font='Century Gothic', fontsize=12)
 ax.axhline(y=1, linestyle = '--', alpha=0.25)
 ax.text(-0.33, 1, '1', va='center', ha='center', font='Century Gothic', fontsize=12)
 ax.axhline(y=2, linestyle = '--', alpha=0.25)
+ax.axvline(x=1.524, linestyle='--', alpha=0.25)
 
 ax.tick_params(axis='x', labelsize=10)
 ax.tick_params(axis='y', labelsize=10)

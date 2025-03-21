@@ -1,4 +1,3 @@
-# !pip install ace_tools --quiet
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -68,7 +67,7 @@ for spine in ax2.spines.values():
 
 # Title and Grid
 title_font = {'fontname':'Century', 'size':'14'}  # Specify the fontname and size
-plt.title('Radar Reflectivity Factors: z ($mm^6 m^{-3}$) and Z (dBZ) vs. Time', fontdict=title_font)
+plt.title('Time Series plot of Radar Reflectivity Factors: z ($mm^6 m^{-3}$) and Z (dBZ)', fontdict=title_font)
 ax1.grid(True, linestyle='--', alpha=0.25)
 
 plt.savefig('radar_reflectivity_factors.png')

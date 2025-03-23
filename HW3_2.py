@@ -15,19 +15,19 @@ MDR = C3 + MDS + 20 * np.log10(r) - L
 fig, ax = plt.subplots(figsize=(10, 6))
 ax.plot(r, MDR, color='red', linewidth=2)
 
-ax.set_title('CHILL Radar: Minimum Detectable Reflectivity vs. Range (L = -1 dB)', font='Century Gothic', fontsize=14)
-ax.set_xlabel('Slant Range (km)', font='Century Gothic', fontsize=12)
-ax.set_ylabel('MDR (dBZe)', font='Century Gothic', fontsize=12)
+ax.set_title('CHILL Radar: Minimum Detectable Reflectivity vs. Range (L = -1 dB)', font='Century', fontsize=14)
+ax.set_xlabel('Slant Range (km)', font='Century', fontsize=12)
+ax.set_ylabel('MDR (dBZe)', font='Century', fontsize=12)
 plt.grid(True, linestyle='--', alpha=0.25)
-plt.axvline(102, color='blue', linestyle=':', label='Max Range for 1.5 km Clouds')
+plt.axvline(102, color='blue', linestyle=':', label='Max Range for 0.5 deg elevation angle and 1.5 km Clouds')
 ax.tick_params(axis='x', labelsize=10)
 ax.tick_params(axis='y', labelsize=10)
 # Set the font name for axis tick labels to be Comic Sans
 for tick in ax.get_xticklabels():
-    tick.set_fontname("Century Gothic")
+    tick.set_fontname("Century")
 for tick in ax.get_yticklabels():
-    tick.set_fontname("Century Gothic")
-plt.legend(loc = 1, prop={'family': 'Century Gothic', 'size': 8})
+    tick.set_fontname("Century")
+plt.legend(loc = 1, prop={'family': 'Century', 'size': 8})
 plt.grid(True, alpha=0.25)
 
 # Turn off top and right spines
@@ -37,7 +37,7 @@ ax.spines['right'].set_visible(False)
 ax.patch.set_alpha(0.95)
 
 # Optionally turn off bottom and left spines
-# ax.spines['bottom'].set_visible(False)
-# ax.spines['left'].set_visible(False)
+ax.spines['bottom'].set_visible(False)
+ax.spines['left'].set_visible(False)
 
 plt.show()
